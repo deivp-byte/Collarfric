@@ -84,3 +84,30 @@ body {
     padding-top: 0; /* Asegúrate de que el video empiece arriba del todo */
 }
 
+/* Ajustes para el scroll horizontal en móvil */
+@media (max-width: 991px) {
+    .mobile-masonry-scroll {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Oculta scroll en Firefox */
+        scroll-snap-type: x mandatory; /* Hace que las fotos se "ajusten" al centro */
+    }
+    
+    .mobile-masonry-scroll::-webkit-scrollbar {
+        display: none; /* Oculta scroll en Chrome/Safari */
+    }
+
+    .mobile-masonry-scroll .col-10 {
+        scroll-snap-align: center;
+    }
+}
+
+/* Ajuste para que los botones de compra no se vean gigantes en móviles pequeños */
+@media (max-width: 576px) {
+    .btn-sm-custom {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+}
